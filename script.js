@@ -11,8 +11,8 @@
     let form_text_2 = document.getElementById("form_text_2")
     let input = document.querySelectorAll("input")
     let inputRadio = document.querySelectorAll("input[type='radio']")
-    let eye_icon = document.getElementById("icon_password")
-
+    let icon_password = document.querySelectorAll(".eye_icon_style")
+    let input_password = document.querySelectorAll(".input_password")
     
 
 btn.forEach(btn =>{
@@ -60,11 +60,22 @@ btn.addEventListener("click", ()=>{
     })
 })
 
-icon_password.addEventListener("click", ()=>{
-    let inputPassword = document.getElementById("input_password_login")
-    if(inputPassword.type === "password"){
-        inputPassword.type = "text"
-    }else{
-        inputPassword.type = "password"
-    }
+icon_password.forEach(icon =>{
+    icon.addEventListener("click", ()=>{
+        input_password.forEach(input =>{
+            if(input.type === "password"){
+                input.type = "text"
+            }else{
+                input.type = "password"
+            }
+    })
 })
+})
+// icon_password.addEventListener("click", ()=>{
+//     let inputPassword = document.getElementById("input_password_login")
+//     if(inputPassword.type === "password"){
+//         inputPassword.type = "text"
+//     }else{
+//         inputPassword.type = "password"
+//     }
+// })
